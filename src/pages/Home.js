@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import '../styles.css'
 import {NavLink} from 'react-router-dom'
 
+
 export default function Home() {
   const ref = useRef(null);
 

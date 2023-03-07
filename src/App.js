@@ -6,9 +6,9 @@ import Home from './pages/Home'
 export default function App() {
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='anime/:id' element={<AnimePage />} />
+      <Route path="/" element={<Home />} />
+      <Route path="anime/:id" element={<AnimePage />} />
     </Routes>
-  )
+  );
 }
 

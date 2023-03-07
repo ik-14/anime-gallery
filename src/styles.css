@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body{
   background-color: #161616;
   height: 100vh;
@@ -89,4 +94,33 @@ body{
 .tile:nth-child(10) {
   top: 55%;
   left: 38%;
+}
+
+.animeHeader {
+  width: 100vw;
+  height: 45vh;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animeHeader img {
+  width: 100%;
+  height: 80%;
+}
+
+.episodes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+  height: 50vh;
+}
+
+.episodeBox{
+  background-color: green;
+  width: 10%;
+  margin: 30px;
 }
