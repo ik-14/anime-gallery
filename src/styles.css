@@ -1,0 +1,92 @@
+body{
+  background-color: #161616;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: whitesmoke;
+}
+
+#container{
+  height: 150vmax;
+  width: 130vmax;
+}
+
+.tile{
+  position: absolute;
+  height: 15%;
+  width: 14%;
+  background-color: red;
+  border-radius: 20px;
+  transition: transform 700ms;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+}
+
+.tile img {
+  transition: opacity 0.6s ease;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  opacity: 0.15;
+}
+
+
+.tile:hover img {
+  opacity: 1;
+  transform: scale(1.01);
+}
+
+.tile:nth-child(1) {
+  top: 15%;
+  left: 14%;
+  background-color: green;
+}
+
+.tile:nth-child(2) {
+  top: 27%;
+  left: 40%;
+  background-color: green;
+}
+
+.tile:nth-child(3) {
+  top: 50%;
+  left: 75%;
+}
+
+.tile:nth-child(4) {
+  top: 74%;
+  left: 67%;
+}
+
+.tile:nth-child(5) {
+  top: 40%;
+  left: 9%;
+}
+
+.tile:nth-child(6) {
+  top: 6%;
+  left: 50%;
+}
+
+.tile:nth-child(7) {
+  top: 70%;
+  left: 6%;
+}
+
+.tile:nth-child(8) {
+  top: 25%;
+  left: 70%;
+}
+
+.tile:nth-child(9) {
+  top: 77%;
+  left: 28%;
+}
+
+.tile:nth-child(10) {
+  top: 55%;
+  left: 38%;
+}
