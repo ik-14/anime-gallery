@@ -124,3 +124,20 @@ body{
   width: 10%;
   margin: 30px;
 }
+
+.videoCont {
+  height: 90vh;
+  padding: 5vh;
+}
+
+.resultsCont {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.resultsImg {
+
+}

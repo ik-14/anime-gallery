@@ -1,9 +1,11 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import '../styles.css'
 import {NavLink} from 'react-router-dom'
+import { META } from "@consumet/extensions";
 
 
 export default function Home() {
+  const anilist = new META.Anilist();
   const ref = useRef(null);
 
   const [width, setWidth] = useState(0);
@@ -56,25 +58,29 @@ export default function Home() {
 
 
   const [posters, setPosters] = useState([]);
+  const searchUrl = "https://api.consumet.org/anime/zoro/";
 
   useEffect(() => {
-    fetch("https://api.consumet.org/meta/anilist/popular")
+    fetch("https://consumet-api-wine.vercel.app/meta/anilist/popular")
       .then((res) => res.json())
-      .then((data) => (data.results))
+      .then((data) => data.results)
       .then((newData) => setPosters(newData));
   }, []);
 
   return (
     <div className="App">
       <div id="container" ref={ref}>
+        {console.log(posters)}
         {posters.map((current, index) => (
-
-          <div className="tile" key={index} style={{backgroundColor: `${current.color}`}}>
-            <NavLink to={`anime/${current.id}`}>
-              <img src={current.image} style={{borderRadius: '13px'}} />
+          <div
+            className="tile"
+            key={index}
+            style={{ backgroundColor: `${current.color}` }}
+          >
+            <NavLink to={`results/${current.title.userPreferred}`}>
+              <img src={current.image} style={{ borderRadius: "13px" }} />
             </NavLink>
           </div>
-          
         ))}
       </div>
     </div>
